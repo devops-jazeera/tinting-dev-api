@@ -1,0 +1,30 @@
+/dispense:
+    post:
+        tags:
+            - Dispense
+        description: save.
+        parameters:
+            - name: body
+              in: body
+              schema:
+                  type: object
+                  properties:
+                      data:
+                          type: object
+                          properties:
+                            can:
+                                type: Integer
+                                example: 900
+                            canqty:
+                                type: Integer
+                                example: 1 
+                            colorant:
+                                type: string
+                                example: "PV,RU"
+                            colorantqty:
+                                type: string
+                                example: "0.0003,0.0003"
+                              
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"
